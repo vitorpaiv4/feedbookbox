@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import MovieRating from './MovieRating'; // Importando o componente MovieRating
+import MovieRating from './MovieRating'; 
 
 function App() {
   const [books, setBooks] = useState([]);
@@ -30,7 +30,7 @@ function App() {
   return (
     <div className="App">
       <div className="RatingContainer">
-        <div className="BookRating"> {/* Container para o avaliador de livros */}
+        <div className="BookRating"> {}
           <h1>Avaliador de Livros</h1>
           <div>
             <input
@@ -60,7 +60,7 @@ function App() {
             </ul>
           </div>
         </div>
-        <div className="MovieRating"> {/* Container para o avaliador de filmes */}
+        <div className="MovieRating"> {}
           <MovieRating />
         </div>
       </div>
