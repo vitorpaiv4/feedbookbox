@@ -59,20 +59,22 @@ function App() {
             <div>
               <button onClick={handleAddBook} className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">Adicionar Livro</button>
             </div>
-            <div className="mt-4">
-              <h2 className="text-xl mb-2">Livros Avaliados:</h2>
-              <ul>
-                {books.map((book, index) => (
-                  <li key={index}>
-                    <strong>{book.title}</strong> - {book.rating} estrelas
-                  </li>
-                ))}
-              </ul>
-            </div>
+            {books.length > 0 && (
+              <div className="mt-4">
+                <h2 className="text-xl mb-2">Livros Avaliados:</h2>
+                <ul>
+                  {books.map((book, index) => (
+                    <li key={index}>
+                      <strong>{book.title}</strong> - {book.rating} estrelas
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
           </div>
         </div>
         <div className="w-1/2 ml-4">
-          <div className="MovieRating">
+          <div className="MovieRating flex flex-col justify-start ">
             <MovieRating />
           </div>
         </div>

@@ -44,28 +44,29 @@ function MovieRating() {
           onChange={handleRatingChange}
           className="block w-full px-4 py-2 rounded border-2 border-gray-500 bg-transparent text-white"
         >
-            
-               <option value="0" className="text-black">Selecione uma classificação</option>
-                <option value="1" className="text-black">1 estrela</option>
-                <option value="2" className="text-black">2 estrelas</option>
-                <option value="3" className="text-black">3 estrelas</option>
-                <option value="4" className="text-black">4 estrelas</option>
-                <option value="5" className="text-black">5 estrelas</option>
+          <option value="0" className="text-black">Selecione uma classificação</option>
+          <option value="1" className="text-black">1 estrela</option>
+          <option value="2" className="text-black">2 estrelas</option>
+          <option value="3" className="text-black">3 estrelas</option>
+          <option value="4" className="text-black">4 estrelas</option>
+          <option value="5" className="text-black">5 estrelas</option>
         </select>
       </div>
       <div>
         <button onClick={handleAddMovie} className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">Adicionar Filme</button>
       </div>
-      <div className="mt-4">
-        <h2 className="text-xl mb-2">Filmes Avaliados:</h2>
-        <ul>
-          {movies.map((movie, index) => (
-            <li key={index}>
-              <strong>{movie.title}</strong> - {movie.rating} estrelas
-            </li>
-          ))}
-        </ul>
-      </div>
+      {movies.length > 0 && (
+        <div className="mt-4">
+          <h2 className="text-xl mb-2">Filmes Avaliados:</h2>
+          <ul>
+            {movies.map((movie, index) => (
+              <li key={index}>
+                <strong>{movie.title}</strong> - {movie.rating} estrelas
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
     </div>
   );
 }
