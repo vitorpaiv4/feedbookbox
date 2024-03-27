@@ -1,10 +1,36 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import MovieRating from './MovieRating'; 
 
 function App() {
   const [books, setBooks] = useState([]);
+  const [movies, setMovies] = useState([]);
   const [title, setTitle] = useState('');
   const [rating, setRating] = useState(0);
+
+  useEffect(() => {
+    loadList();
+  }, []);
+
+  useEffect(() => {
+    saveList();
+  }, [books, movies]);
+
+  const loadList = () => {
+    const savedBooks = localStorage.getItem('books');
+    if (savedBooks) {
+      setBooks(JSON.parse(savedBooks));
+    }
+
+    const savedMovies = localStorage.getItem('movies');
+    if (savedMovies) {
+      setMovies(JSON.parse(savedMovies));
+    }
+  };
+
+  const saveList = () => {
+    localStorage.setItem('books', JSON.stringify(books));
+    localStorage.setItem('movies', JSON.stringify(movies));
+  };
 
   const handleTitleChange = (event) => {
     setTitle(event.target.value);
@@ -74,8 +100,8 @@ function App() {
           </div>
         </div>
         <div className="w-1/2 ml-4">
-          <div className="MovieRating flex flex-col justify-start ">
-            <MovieRating />
+          <div className="MovieRating flex flex-col justify-start">
+            <MovieRating movies={movies} setMovies={setMovies} />
           </div>
         </div>
       </div>
