@@ -106,6 +106,7 @@ function App() {
               <option value="Comédia romântica" className="text-black">Comédia romântica</option>
               <option value="Ficção científica" className="text-black">Ficção científica</option>
               <option value="Terror" className="text-black">Terror</option>
+              <option value="Animação" className="text-black">Terror</option>
             </select>
             <button onClick={handleAddMovie} className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">Adicionar Filme</button>
             {movies.length > 0 && (
