@@ -23,8 +23,7 @@ Este é um projeto de Avaliador de Filmes desenvolvido em React.
 3. Instale as dependências do projeto: npm install
    
 4. Inicie o servidor de desenvolvimento: npm start
-5. 
-5. O aplicativo estará disponível em seu navegador em [http://localhost:3000](http://localhost:3000).
+5.  O aplicativo estará disponível em seu navegador em [http://localhost:3000](http://localhost:3000).
 
 ## Contribuindo
 
