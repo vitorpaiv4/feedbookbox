@@ -1,6 +1,6 @@
 # Avaliador de Livros e Filmes
 
-Este é um projeto de avaliação de livros e filmes desenvolvido em React. Ele permite aos usuários adicionar livros e filmes, atribuir uma classificação de estrelas a eles e visualizar os itens avaliados.
+Este é um projeto de avaliação de filmes desenvolvido em React. Ele permite aos usuários adicionar livros e filmes, atribuir uma classificação de estrelas a eles e visualizar os itens avaliados.
 
 ## Funcionalidades
 
