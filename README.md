@@ -1,29 +1,29 @@
-# Avaliador de Livros e Filmes
+# Avaliador de Filmes
 
-Este é um projeto de avaliação de filmes desenvolvido em React. Ele permite aos usuários adicionar livros e filmes, atribuir uma classificação de estrelas a eles e visualizar os itens avaliados.
+Este é um projeto de Avaliador de Filmes desenvolvido em React.
 
 ## Funcionalidades
 
-- Adicionar livros e filmes com seus respectivos títulos.
-- Avaliar livros e filmes atribuindo uma classificação de estrelas (de 1 a 5 estrelas).
-- Visualizar os livros e filmes avaliados.
+- Adicionar um filme com título, categoria, classificação e comentário.
+- Remover um filme da lista.
+- Visualizar a lista de filmes avaliados.
 
 ## Tecnologias Utilizadas
 
-- React: Uma biblioteca JavaScript para construir interfaces de usuário.
-- Tailwind CSS: Um framework CSS utilitário para criar rapidamente interfaces de usuário.
+- React
+- Tailwind CSS
+- Heroicons
 
-## Como Usar
+## Como Executar
 
-1. Clone o repositório para sua máquina local: https://github.com/vitorpaiv4/feedbookbox.git
-   
+1. Clone o repositório: https://github.com/vitorpaiv4/feedbookbox
+
 2. Navegue até o diretório do projeto: cd avaliador-de-livros-e-filmes
 
 3. Instale as dependências do projeto: npm install
    
 4. Inicie o servidor de desenvolvimento: npm start
-5. 
-5. O aplicativo estará disponível em seu navegador em [http://localhost:3000](http://localhost:3000).
+5.  O aplicativo estará disponível em seu navegador em [http://localhost:3000](http://localhost:3000).
 
 ## Contribuindo
 
