@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { StarIcon, FilmIcon } from "@heroicons/react/24/outline";
+import { StarIcon, FilmIcon, HomeIcon, UserGroupIcon, PhoneIcon } from "@heroicons/react/24/outline";
 
 function App() {
   const [movies, setMovies] = useState([]);
@@ -75,18 +75,29 @@ function App() {
             <FilmIcon className='h-10 w'/>
             <h1 className="text-3xl ml-2"> FeedCine</h1>
           </div>
-          <div className="flex items-center">
+          <div className="flex items-center gap-5">
             <input
               type="text"
               placeholder="Pesquisar..."
               className="px-4 py-2 mr-4 rounded border-2 border-gray-500 bg-transparent text-white placeholder-gray-500"
             />
-            <a href="#" className="mr-4 hover:text-gray-300">Início</a>
-            <a href="#" className="hover:text-gray-300">Quem Somos</a>
+            <div className='flex gap-2'>
+              <HomeIcon className='h-5'/>
+          <a href="#" className="mr-4 hover:text-gray-300">Home</a>
+            </div>
+            <div className='flex gap-2'>
+              <UserGroupIcon className='h-5'/>
+              <a href="#" className="hover:text-gray-300">Quem Somos</a>
+            </div>
+            <div className='flex gap-2 '>
+              <PhoneIcon className='h-5'/>
+              <a href="#" className="hover:text-gray-300">Contatos</a>
+            </div>
+            
           </div>
         </nav>
 
-        {/* Conteúdo da aplicação */}
+        {}
         <div className="flex justify-center">
           <div className="MovieRating w-full max-w-lg">
             <input
