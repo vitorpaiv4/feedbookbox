@@ -70,7 +70,7 @@ function App() {
       <div className="container mx-auto flex justify-center items-center">
         <div className='flex-1'>
           <div className="MovieRating">
-            <h1 className="text-3xl mb-4">Avaliador de Filmes</h1>
+            <h1 className="text-3xl mb-7">FeedCine</h1>
             <input
               type="text"
               placeholder="Título do Filme"
@@ -113,23 +113,25 @@ function App() {
               <div className="mt-4">
                 <h2 className="text-xl mb-2">Filmes Avaliados:</h2>
                 <ul>
-                  {movies.map((movie, index) => (
-                    <li key={index} className="flex items-center">
-                      <div className="mr-4">
-                        <strong>{movie.title}</strong>
-                        <br />
-                        <img src="" alt={movie.title} className="mt-1 h-24" />
-                      </div>
-                      <div>
-                        Categoria: {movie.category}, Estrelas: {movie.rating}
-                        <br />
-                        <div className="comment-box bg-white p-2 rounded-md shadow-md mt-2 inline-block min-w-min">
-                          <div className='text-black'> <span className='text-sm'>{movie.comment}</span> </div>
-                        </div>
-                        <button onClick={() => handleRemoveMovie(index)} className="px-2 py-1 ml-2 bg-red-500 text-white rounded hover:bg-red-600">Remover</button>
-                      </div>
-                    </li>
-                  ))}
+                {movies.map((movie, index) => (
+  <li key={index} className="flex items-center">
+    <div className="mr-4">
+      <strong>{movie.title}</strong> - {movie.category}
+      <br />
+      <img src="" alt={movie.title} className="mt-1 h-15" />
+    </div>
+    <div className='stari'>
+      {movie.rating} estrelas
+      <div className="comment-box bg-white p-2 rounded-md shadow-md mt-2 inline-block min-w-min">
+        <div className="text-black">
+          <span className="text-sm">{movie.comment}</span>
+        </div>
+      </div>
+      <button onClick={() => handleRemoveMovie(index)} className="px-2 py-1 ml-2 bg-red-500 text-white rounded hover:bg-red-600">Remover</button>
+    </div>
+  </li>
+))}
+
                 </ul>
               </div>
             )}
